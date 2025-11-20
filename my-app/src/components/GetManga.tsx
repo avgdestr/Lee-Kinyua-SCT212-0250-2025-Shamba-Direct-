@@ -74,7 +74,11 @@ const GetManga = () => {
             </div>
             <img
               className="art-img p-1 img"
-              src={typeof img.image === "string" ? (resolveMediaUrl(img.image) || img.image) : ""}
+              src={
+                typeof img.image === "string"
+                  ? resolveMediaUrl(img.image) || img.image
+                  : ""
+              }
               alt={img.title}
               onClick={() => setSelectedIdx(idx)}
               style={{ cursor: "pointer" }}
@@ -128,7 +132,10 @@ const GetManga = () => {
             &#8592;
           </button>
           <img
-            src={resolveMediaUrl((items[selectedIdx] as any).image) || (items[selectedIdx] as any).image}
+            src={
+              resolveMediaUrl((items[selectedIdx] as any).image) ||
+              (items[selectedIdx] as any).image
+            }
             alt={(items[selectedIdx] as any).title}
             className="lightbox-img"
           />
