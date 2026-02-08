@@ -38,8 +38,6 @@ function acceptCookies() {
     if (banner) {
         banner.classList.add('hidden');
     }
-    
-    console.log('Cookies accepted. User ID:', userId);
 }
 
 const products = [
@@ -91,8 +89,6 @@ function addToCart(productId) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Shamba Direct loaded');
-    console.log('Data Protection Act (2019) Compliant');
     showCookieBanner();
     const acceptBtn = document.getElementById('accept-cookies');
     if (acceptBtn) {
